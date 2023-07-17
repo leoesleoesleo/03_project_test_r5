@@ -622,6 +622,11 @@ Este patròn se divide en dos partes principales: el conector y el componente. E
 	docker-compose -p project_test run web bash
 	```
 
+- Ir a la altura del archivo manage.py
+ 	```
+	cd project_test
+	```
+  
 - Entrar al contenedor en modo bash y migrar la base de datos, en la altura del archivo manage.py
     ```
    python manage.py makemigrations
