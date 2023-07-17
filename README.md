@@ -11,7 +11,7 @@ El campo imagen de tipo ImageField es para representar la imagen del libro, y se
 También se ha agregado el método __str__ en cada modelo para que se muestre una representación legible en el administrador de Django y en otros contextos.
 </p>
 <div align="center">
-<img height="500" src="https://leoesleoesleo.github.io/imagenes/bd_r5.png" alt="Talataa">
+<img height="400" src="https://leoesleoesleo.github.io/imagenes/bd_r5.png" alt="Talataa">
 </div>
 
 ## Flujo del proceso
@@ -19,7 +19,7 @@ También se ha agregado el método __str__ en cada modelo para que se muestre un
 Diagrama de contexto
 </p>
 <div align="center">
-<img height="500" src="https://leoesleoesleo.github.io/imagenes/diagrama_r5.png" alt="Talataa">
+<img height="800" src="https://leoesleoesleo.github.io/imagenes/diagrama_r5.png" alt="Talataa">
 </div>
 
 ## API REST con sus endpoints.
