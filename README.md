@@ -26,12 +26,11 @@ Diagrama de contexto
 
 [POST] http://localhost:8000/api/token/
 
-- Request
+- Request (acà va el usuario que se crea con el comando createsuperuser que se describe en el manual de instalación)
 	```
 	{
 	    "username": "xxx",
 	    "password": "xxx"
-	}
 	}
 - Response
 	```
