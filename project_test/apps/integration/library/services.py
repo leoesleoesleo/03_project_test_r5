@@ -71,7 +71,7 @@ def services_google_books(
                 volume_info.get("authors", ApiGoogle.UNKNOWN.value)
             )
             v_categories.append(
-                volume_info.get("categories", ApiGoogle.UNKNOWN.value)
+                volume_info.get("categories", [ApiGoogle.UNKNOWN.value])
             )
             v_publishedDate.append(
                 volume_info.get("publishedDate", ApiGoogle.UNKNOWN.value)

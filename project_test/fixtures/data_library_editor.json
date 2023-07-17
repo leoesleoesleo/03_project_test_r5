@@ -1,20 +1,20 @@
 [
 	{
-	  "model": "library.editor",
+	  "model": "library.published",
 	  "pk": 1,
 	  "fields": {
-		"name": "Penguin Books"
+		"name": "Penguin published"
 	  }
 	},
 	{
-	  "model": "library.editor",
+	  "model": "library.published",
 	  "pk": 2,
 	  "fields": {
 		"name": "HarperCollins"
 	  }
 	},
 	{
-	  "model": "library.editor",
+	  "model": "library.published",
 	  "pk": 3,
 	  "fields": {
 		"name": "Random House"
