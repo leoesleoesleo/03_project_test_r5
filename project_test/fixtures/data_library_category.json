@@ -1,0 +1,24 @@
+[
+	{
+	  "model": "library.category",
+	  "pk": 1,
+	  "fields": {
+		"name": "Fiction"
+	  }
+	},
+	{
+	  "model": "library.category",
+	  "pk": 2,
+	  "fields": {
+		"name": "Mystery"
+	  }
+	},
+	{
+	  "model": "library.category",
+	  "pk": 3,
+	  "fields": {
+		"name": "Romance"
+	  }
+	}
+  ]
+  

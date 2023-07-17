@@ -1,0 +1,24 @@
+[
+	{
+	  "model": "library.editor",
+	  "pk": 1,
+	  "fields": {
+		"name": "Penguin Books"
+	  }
+	},
+	{
+	  "model": "library.editor",
+	  "pk": 2,
+	  "fields": {
+		"name": "HarperCollins"
+	  }
+	},
+	{
+	  "model": "library.editor",
+	  "pk": 3,
+	  "fields": {
+		"name": "Random House"
+	  }
+	}
+  ]
+  

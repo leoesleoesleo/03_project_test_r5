@@ -1,0 +1,35 @@
+[
+    {
+      "model": "library.bookauthor",
+      "pk": 1,
+      "fields": {
+        "author_id": 1,
+        "book_id": 1
+      }
+    },
+    {
+      "model": "library.bookauthor",
+      "pk": 2,
+      "fields": {
+        "author_id": 2,
+        "book_id": 2
+      }
+    },
+    {
+        "model": "library.bookauthor",
+        "pk": 3,
+        "fields": {
+          "author_id": 3,
+          "book_id": 3
+        }
+    },
+    {
+      "model": "library.bookauthor",
+      "pk": 4,
+      "fields": {
+        "author_id": 1,
+        "book_id": 3
+      }
+    }
+  ]
+  

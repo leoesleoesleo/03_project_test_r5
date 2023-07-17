@@ -1,0 +1,3 @@
+
+class GoogleBooksDataError(Exception):
+    pass

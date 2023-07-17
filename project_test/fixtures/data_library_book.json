@@ -1,0 +1,39 @@
+[
+    {
+      "model": "library.book",
+      "pk": 1,
+      "fields": {
+        "title": "Les Misérables",
+        "subtitle": "",
+        "publication_date": "1862-01-01",
+        "description": "A historical novel by Victor Hugo.",
+        "image": null,
+        "editor": 1
+      }
+    },
+    {
+      "model": "library.book",
+      "pk": 2,
+      "fields": {
+        "title": "Pride and Prejudice",
+        "subtitle": "",
+        "publication_date": "1813-01-28",
+        "description": "A romantic novel by Jane Austen.",
+        "image": null,
+        "editor": 2
+      }
+    },
+    {
+      "model": "library.book",
+      "pk": 3,
+      "fields": {
+        "title": "Crime and Punishment",
+        "subtitle": "",
+        "publication_date": "1866-01-01",
+        "description": "A psychological novel by Fyodor Dostoevsky.",
+        "image": null,
+        "editor": 3
+      }
+    }
+  ]
+  

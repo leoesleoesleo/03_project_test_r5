@@ -1,0 +1,27 @@
+[
+	{
+	  "model": "library.author",
+	  "pk": 1,
+	  "fields": {
+		"first_name": "Victor",
+		"last_name": "Hugo"
+	  }
+	},
+	{
+	  "model": "library.author",
+	  "pk": 2,
+	  "fields": {
+		"first_name": "Jane",
+		"last_name": "Austen"
+	  }
+	},
+	{
+	  "model": "library.author",
+	  "pk": 3,
+	  "fields": {
+		"first_name": "Fyodor",
+		"last_name": "Dostoevsky"
+	  }
+	}
+  ]
+  
