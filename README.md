@@ -548,7 +548,7 @@ El objetivo del proyecto es realizar búsquedas por autor en dos fuentes diferen
 <strong>Arquitectura Hexagonal</strong>
 </p>
 <p align="justify">
-El principal motivo para separar nuestra aplicación en dos capas (customer, library, api_google_books, api_open_library) es que cuente con su propia responsabilidad. De esta manera consigue desacoplar capas de nuestra aplicación permitiendo que evolucionen de manera aislada. Además, tener el sistema separado por responsabilidades nos facilitará:
+El principal motivo para separar nuestra aplicación en varias capas (customer, library, api_google_books, api_open_library) es que cuente con su propia responsabilidad. De esta manera consigue desacoplar capas de nuestra aplicación permitiendo que evolucionen de manera aislada. Además, tener el sistema separado por responsabilidades nos facilitará:
 </p>
 
 - La reutilización y mantenibilidad
