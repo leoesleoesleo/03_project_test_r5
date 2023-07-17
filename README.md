@@ -22,13 +22,13 @@ Diagrama de contexto
 <img height="700" src="https://leoesleoesleo.github.io/imagenes/diagrama_r5.png" alt="Talataa">
 </div>
 <p align="justify">
-El objetivo del proyecto es realizar búsquedas por autor en dos fuentes diferentes (APIs) y estructurar y almacenar los datos en una base de datos interna. A medida que se realicen más consultas de libros, se irá acumulando más información en la base de datos interna con el fin de optimizar los consumos a las APIs.
+El alcance del proyecto es realizar búsquedas por autor en dos fuentes diferentes (APIs) y estructurar y almacenar los datos en una base de datos interna. A medida que se realicen más consultas de libros, se irá acumulando más información en la base de datos interna con el fin de optimizar los consumos a las APIs.
 	
 <strong>POST /api/token/:</strong> Se crea un módulo llamado Customer para almacenar a los usuarios y administrar roles y permisos junto con User. Se integra JSON Web Token (JWT), que es un estándar para transmitir información de forma segura.
 
 <strong>GET /books_author:</strong> Primero se valida si los datos se encuentran en la base de datos interna para extraerlos de allí buscando por el nombre completo del autor. En caso contrario, se ejecutan de forma recurrente las dos APIs de libros: Google Books y Open Library, respectivamente. Luego, esta información se almacena en un pool de datos con el objetivo de guardarla en memoria durante 10 minutos, de manera que estén disponibles para ejecutar el servicio POST.
 
-<strong>POST /books_author:</strong> Realiza una consulta en el pool de datos para optimizar los recursos al llamar a las APIs. Posteriormente, persiste la información en la estructura de base de datos normalizada que se encuentra en el modelo.
+<strong>POST /books_author:</strong> Realiza una consulta en el pool de datos para optimizar los recursos al llamar a las APIs. Posteriormente, persiste la información en la estructura de base de datos normalizada que se encuentra en el modelo, los datos se guardarán sin generar duplicidad en las tablas maestras.
 
 <strong>DELETE /books_author:</strong> Elimina un libro de la base de datos pasando como parámetro el ID de la base de datos interna.
 </p>
@@ -607,6 +607,11 @@ Este patròn se divide en dos partes principales: el conector y el componente. E
 	git clone https://github.com/leoesleoesleo/03_project_.git
 	```
 
+- Crear archivo de variables de entorno .env basado en .env.example
+	```
+  	cp .env_example .env
+ 	```
+  
 - Levantar contenedor Docker
 	```
 	docker-compose -p project_test up --build
@@ -617,8 +622,6 @@ Este patròn se divide en dos partes principales: el conector y el componente. E
 	docker-compose -p project_test run web bash
 	```
 
-- Crear archivo de variables de entorno .env basado en .env.example
-
 - Entrar al contenedor en modo bash y migrar la base de datos, en la altura del archivo manage.py
     ```
    python manage.py makemigrations
@@ -627,21 +630,6 @@ Este patròn se divide en dos partes principales: el conector y el componente. E
    python manage.py migrate
     ``` 
 
-- Ejecutar pruebas unitarias (Opcional)
-   ```
-   pytest -v  
-    ``` 
-
-- Validar cobertura de la aplicación (Opcional)
-    ```
-   coverage run -m pytest -v -p no:cacheprovider --junitxml=junit/test-results.xml --cov=. --cov-report=xml --cov-report=html  
-    ```    
-    
-- Crear super usuario en auth_user, en la altura del archivo manage.py
-    ```
-   python manage.py createsuperuser
-    ```
-    
 - Ejecutar Fixtures, en la altura del archivo manage.py
     ```
    python3 manage.py loaddata fixtures/data_customer_customer.json
@@ -652,6 +640,21 @@ Este patròn se divide en dos partes principales: el conector y el componente. E
    python3 manage.py loaddata fixtures/data_library_bookauthor.json
    python3 manage.py loaddata fixtures/data_library_bookcategory.json
     ```
+
+- Crear super usuario en auth_user, en la altura del archivo manage.py
+    ```
+   python manage.py createsuperuser
+    ```
+    
+- Ejecutar pruebas unitarias (Opcional)
+   ```
+   pytest -v  
+    ``` 
+
+- Validar cobertura de la aplicación (Opcional)
+    ```
+   coverage run -m pytest -v -p no:cacheprovider --junitxml=junit/test-results.xml --cov=. --cov-report=xml --cov-report=html  
+    ```    
 
 - Administrar Usuarios desde el panel admin Django(Opcional)
     ```
