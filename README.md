@@ -1,7 +1,7 @@
 #
 # Test Project R5 (Backend)
 Por: Leonardo Patiño Rodriguez
-## &nbsp; [![pyVersion37](https://img.shields.io/badge/python-3.7.6-blue.svg)](https://www.python.org/download/releases/3.7/)
+## &nbsp; [![pyVersion38](https://img.shields.io/badge/python-3.8.0-blue.svg)](https://www.python.org/download/releases/3.7/)
 
 ## Diseño modelado de datos
 Modelo: [https://dbdiagram.io/d/6383a24fc9abfc61117575bf](https://dbdiagram.io/d/64b1946502bd1c4a5e19c082)
