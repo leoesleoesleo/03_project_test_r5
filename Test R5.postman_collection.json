@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "9ca55d31-5197-4429-b773-84453824d662",
+		"name": "Test R5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18791129"
+	},
+	"item": [
+		{
+			"name": "test R5",
+			"item": [
+				{
+					"name": "list_books_author",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg5NzA1OTkzLCJpYXQiOjE2ODk2MTk1OTMsImp0aSI6ImY4ZTUyNDU5Zjc0NDRiOGZhYmQzMDIwZTM0YjM0OTA1IiwidXNlcl9pZCI6MX0.LdQ24tDCwBn2YjJl-H1BYzFkeknJ7EmtYYtdoFa5wkc",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"author\": \"Ernest Hemingway\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/library/books_author",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"library",
+								"books_author"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"\",\n    \"password\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/token/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"token",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save_book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg5NzA1OTkzLCJpYXQiOjE2ODk2MTk1OTMsImp0aSI6ImY4ZTUyNDU5Zjc0NDRiOGZhYmQzMDIwZTM0YjM0OTA1IiwidXNlcl9pZCI6MX0.LdQ24tDCwBn2YjJl-H1BYzFkeknJ7EmtYYtdoFa5wkc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"UnKREAAAQBAJ\",\n    \"source\": \"google_books\"\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:8000/library/books_author",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"library",
+								"books_author"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_book",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg5NjE4MDA2LCJpYXQiOjE2ODk1MzE2MDYsImp0aSI6ImQ5NmY5YmRjZTg1MjRiYjI4YmJkYjc4NDI1NDg4NTgyIiwidXNlcl9pZCI6MX0.W5k7h7pzbJLWLihTy4D-lmVLrEEihMons30gktBGz2Y",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:8000/library/books_author",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"library",
+								"books_author"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

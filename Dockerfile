@@ -19,9 +19,6 @@ RUN pip install --upgrade pip==23.0.1
 
 RUN pip install -r requirements.txt
 
-# Copy nginx configuration file
-# COPY nginx.conf /etc/nginx/nginx.conf
-
 EXPOSE 8000
 
 # Run it
